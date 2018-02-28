@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>轮播插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+		.carousel{width:300px;}
+  </style>
+ </head>
+ <body>
+  <!--  
+		1.设计轮播图片的容器
+		  1)加上.carousel(只有一个相对定位标志) ？为什么要加呢(为了实现轮播效果)
+			2)加上slide样式，使用图片与图片切换效果有平滑感(即过度)
+	-->
+	<div id="myCarousel" class="carousel slide">
+	<!-- 2.设计轮播图的计数器(小圆点)
+		  1).active 默认显示某一张
+			2)data-slide-to="" 向轮播传递一个原始滑动索引
+			3).carousel-indicators 圆圈部分样式，都是绝对定位，每个li设置为行内快元素，用text-indent:-999来隐藏字体
+	-->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<!-- 3.设计轮播图片播放区,使用.carousel-inner样式来控制(
+				旋转图片列表区域，其中每项有item来装饰
+					1)carousel-caption：表示每个item项应该有标题信息，默认显示下、中位置
+					<div class="carousel-caption">
+						<h4>标题一</h4>
+						<p>标题一简介</p>
+					</div>
+			)
+		-->
+		<div class="carousel-inner">
+			<div class="item active">
+				<a href="#"><img src="img/t1.png" alt="第一张"></a>
+			</div>	
+			<div class="item">
+				<a href="#"><img src="img/t2.png" alt="第二张"></a>
+			</div>	
+			<div class="item">
+				<a href="#"><img src="img/t3.png" alt="第三张"></a>
+			</div>	
+		</div>
+		<!-- 4.设置图片左右滑动的按钮
+				1)carousel-control (left/right区分左右) 设置向左向右按钮的样式
+				{
+					carousel-control 控制两个箭头的样式，但是两个箭头的位置时上下放的
+					left/right 就是控制箭头那个在左边，那个在右边
+				}
+				2)data-slide="prev/next" 用来改变幻灯片相对于当前位置的位置
+		-->
+		<a href="#myCarousel" data-slide="prev" class="carousel-control left"> &lsaquo; </a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right"> &rsaquo; </a>
+	</div>
+
+
+
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		
+	</script>
+ </body>
+</html>
