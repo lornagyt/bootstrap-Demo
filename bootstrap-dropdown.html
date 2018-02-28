@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ </head>
+ <body>
+	<!-- <div class="dropdown">
+		<a href="#" id="drop">触发元素</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">隐藏元素1</a></li>
+			<li><a href="#">隐藏元素2</a></li>
+			<li><a href="#">隐藏元素3</a></li>
+			<li><a href="#">隐藏元素4</a></li>
+		</ul>
+	</div>
+	
+	<div class="dropdown">
+		<a href="#" data-toggle="dropdown">触发元素</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">隐藏元素1</a></li>
+			<li><a href="#">隐藏元素2</a></li>
+			<li><a href="#">隐藏元素3</a></li>
+			<li><a href="#">隐藏元素4</a></li>
+		</ul>
+	</div>
+	
+	<script>
+		$("#drop").click(function(){
+			$("#drop").next().toggle();
+		})
+	</script> -->
+
+	<div class="dropdown">
+	<!-- 下拉菜单内容都要写在.dropdown的div下  -->
+		<!-- 
+			1.有一个点击时显示下拉内容的按钮
+			 1)data-toggle="" 以什么样的形式显示
+			 2).btn 改变按钮的样式
+		-->
+		<button type="button" data-toggle="dropdown" class="btn">主题
+			<span class="caret"></span><!-- 倒三角图标  -->
+		</button>
+		<!-- 
+			1)加了.pull-right 下拉的内容就在显示屏的右边
+			2)role	给一些特定的浏览工具识别
+							把某个元素转换为某种功能使用
+		-->
+		<ul class="dropdown-menu" role="menu">
+			<li class="dropdown-header">分类1</li>
+			<li><a href="#">Java</a></li>
+			<li><a href="#">C++</a></li>
+			<li class="divider"></li><!-- 分割线  -->
+			<li class="dropdown-header">分类2</li>
+			<li><a href="#">HTML</a></li>
+			<li><a href="#">Javascript</a></li>
+		</ul>
+	</div>
+	
+ </body>
+</html>
