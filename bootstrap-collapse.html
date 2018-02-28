@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+ </head>
+ <body>
+	 
+	<!--  
+		1.在最外层加一个div，如果不加就会单独显示
+	-->
+	<div class="container">
+	  <!--  
+			2.
+			.panel-group 将下面的内容变成一个小组，如果不添加类每个div会单独存在，间隔会变大(包住所有内容)
+		-->
+		<div class="panel-group" id="pgroup">
+			<!--  
+				3.div包住一个整体（包含一个标题一个内容）
+				.panel-danger/info/... 标题容器的颜色
+			-->
+			<div class="panel panel-danger">
+			  <!--   
+					4.添加一个标题容器
+					.panel-heading 在面板中添加一个标题容器(在头部，内容之上)
+					.panel-footer 在面板中添加一个标题容器(在底部，内容之下)
+				-->
+				<div class="panel-heading">
+					<a href="#xyz" data-toggle="collapse" data-parent="#pgroup">西游</a>
+					<!-- 
+						data-toggle="collapse" 添加到你想要展开或折叠的连接上
+						href/data-target=""	属性添加到父组件，他的值是子组件的id
+						data-parent 属性把折叠面板的id添加到要展开或折叠的组件的连接上
+					-->
+				</div>
+				<!--  
+					5.添加一个内容主题
+					.collapse in 显示内容
+					.collapse 隐藏内容
+				-->
+				<div class="collapse in panel-collapse" id="xyz">
+					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quibusdam, voluptatem aliquid assumenda qui ut accusantium quia. Voluptatem neque mollitia alias a at eos deserunt cumque culpa ipsum architecto? Quibusdam.</div>
+				</div>
+			</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<a href="#xyz2" data-toggle="collapse" data-parent="#pgroup" class="collapsed">三国</a>
+				</div>
+				<div class="collapse panel-collapse" id="xyz2">
+					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, quam, quis, quas earum at temporibus corporis sint quo quibusdam consequuntur harum labore saepe eveniet! Ab, error officiis dolorum libero adipisci!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+ </body>
+</html>
